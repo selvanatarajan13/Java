@@ -1,0 +1,30 @@
+Class is contain the collection of variables and methods. In OOP, each functions are called as a method and each variable is called as fields or attributes...
+
+Abstraction, Encapsulation, Inheritance and Polymorphism are the four pillars in the Object Oriented Programming.
+
+    Abstraction - Displaying only basic information and hiding unintended details.
+    Encapsulation - Wrapping up data and information under a single unit.
+    Inheritance - Creating new classes based on existing one.
+    Polymorphism - Allowing objects of different classes to be treatd uniformly.
+
+new - new refer as a keyword to be allocated memory in RAM for java object or variable.
+
+Access modifiers :- 
+    In java, Access modifiers helps to restrict the scope of the class, constructor, variable and method. It provide the security, accessibility and etc, to the user depanding upon the access modifier used with the element. There are 4 Access modifier in Java such that are default, public, private and protected...
+
+    Public :-
+        - public are accessible from everywhere in the program. There is no restriction on the scope of public data members.
+
+    Private :-
+        - accessible only within the class while the same timeAny other class of the same package will not be able to access these members.
+        - Top-level classes or interfaces can not be declared as private because
+        - private means “only visible within the enclosing class”.
+        - protected means “only visible within the enclosing class and any subclasses”.
+
+    Protected :- 
+        -  accessible within the same package or subclasses in different packages while do not anoter package class or another class.
+    
+
+
+Rules of OOP : 
+    1. In java OOP, the Main function must be used public static, here the pulic access modifier is must be used.

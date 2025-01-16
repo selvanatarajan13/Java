@@ -1,0 +1,53 @@
+-----------------------------------------------------------------------------------------------------------------------------------
+					Stream in Java
+-----------------------------------------------------------------------------------------------------------------------------------
+
+Stream:
+	- In java, a Stream represent the sequence or collection of element that support aggregate function such as filtering,
+	mapping, reducing and so on.
+	- It provides functional styling programming paradigm for processing collection of data.
+	- A streams was designed to manage the processing of element.
+Note:
+	- Another important difference is that streams are lazy, like lamda expression variables.
+	- When you call many of the method on stream, execution may not immediatly occur.
+	- instead of you will need to invoke a special operation on stream, like you would by calling lambda functional
+	method. This special operation is called terminal operation.
+
+Why use a Streams?
+	- Streams are exciting addition to java, Because they provide several benefits.
+	- First, they make a code to process data uniform, concise and repeatable, similar to database SQL.
+	- Second, When working with large collection, parallel streams will provide the performance advantage.
+
+Key points:
+	- It's not a data structure.
+	- Functional style
+
+
+Collection: To represent the group of object/data as single entity.
+Stream: To process the data from the collection, we use stream concept.
+
+What is terminal operation?
+	- In Java API Stream, the terminal operation is a method that produce a result or side-effect, and typically returns
+	void or a non-Stream result. In other words, terminal operation are the final-step in a Stream pipeline, and they
+	are trigger the entire pipeline.
+	- When a terminal operation in invoked, the Stream pipeline is executed, and the result is produced.
+	- Here are some examples of terminal operation,
+		- forEach(), collect(), reduce(), count(), toArray().
+
+Note: Streams are lazy:-
+	Computation on the source of the data is only performed when the terminal operation are initiated, and source
+	elements are consumed as only needed.	
+	In other words, the stream doesn't start processing the data until the terminal operation is called.
+	In Stream, the result will be consistent each time, but the process to get there element is not guarantee to be.
+	Once we invoke a terminal operation on a Stream, we can may think as a pipeline is opened, and the flow beginning, but
+	at that point, the valve is shut, and the pipelined closed.
+
+Why is this important?
+	This laziness has several benefits,
+	- Efficient memory usage:- Since the Streams only processes the data as needed, it doesn't require to storing entire
+				data set in memory at once. This is particularly useful when working on the large dataset.
+	- Improved performance:- By delayed the computation processing until necessary, Stream can avoid unnecessary
+				operations or overhead.
+	- Flexibility:- Laziness allow you to build the complex stream pipelines without worrying about the intermediate
+			result. so you can focus on defining the desired operation and the stream will take care the 
+			execution efficiently.

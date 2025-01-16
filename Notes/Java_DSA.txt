@@ -1,0 +1,561 @@
+What is Java?
+	- Java is the one of the fastest more popular and object oriented programming language. The main feature and 
+	advantage is garbage collection and efficient memory management.
+	- And also Java provide numerous benefits such reliability, maintanence, scalability and so on.
+	- The main feature of java that make it robust are garbage collection, exceptional handling and memory allocation.
+
+What is JDK?
+	- JDK stands for Java Development Kit.
+	- JDK is a cross-platform software development environment that offers that offers collection of tools and libraries
+	neccessary for Java based software application development and applets.
+	- It is a core packages used in java, along with the Java Virtual Machine and Java Runtime Environment.
+	- JDK contains JRE, an interpreter/loader, a compiler, an archiever (jar) and many more,.
+
+What is JRE?
+	- JRE stands for Java Run-Time Environment.
+	- JRE is an open-access software distribution that has a java class libraries, specifi tools and seperate JVM. 
+	- In java, JRE is one of the interrelated component in the Java Development Kit.
+	- In JRE where the source code is compiled and converted into byte code.
+	- JRE loads classes memory access and get system resource.
+
+What is JVM?
+	- JVM stands for Java Virtual Machine.
+	- JVM is the abstract computing machine.
+	- In JVM, Java byte code is compiled and generate in machine code where the machine code can be executed.
+	- The JVM is responsible for loading code, verifying code, executing code and providing run-time environment.
+
+What is JIT?
+	- JIT stands for Just-In-Time compiler.
+	- Its a compiler and it is the component of run-time environment that improve performance of application by compiling
+	bytecode into native machine code at runtime.
+
+What is core packages?
+	- Core packages refers to a set of fundemental packages in java that provides essential functionality for building
+	Java applications. That's the packages are 
+		- Java.lang.:- provides classes for basic java functionality such as Math, String and Object.
+		- Java.util.:- Offers utility classes for collections, date and time and other miscellaneous functionality.
+
+What is packages and in java how many packages are there?
+	- packages are collection of classes, interfaces and subclasses that are organized together to provide a single 
+	unit of functionality.
+	- There are numerous packages in java, and they are categorized into several main groups. they are,
+		- Java core packages,
+		- Java DSA packages
+			- Java collections:- provide classes and interface working with collections such as list, set and maps.
+			- Java.awt:- Offer classes for creating GUI.
+		- Java security package:
+		- Java database package
+			- java.sql:- provide classes for working with database, including JDBC drivers.
+			- java.persistence:- Offer classes for Object-Relational-Mapper (ORM).
+		- Java web packages
+			- javax.servlet:- provides classes for creating web application using Servlet API.
+			- javax.faces:- Offering classes for creating web application using JavaServer Facing (JSF) framework.
+		- Java XML packages
+		- Java security packages
+			- java.security
+			- java.crypto
+			- javax.security.auth
+			- javax.net.ssl
+
+What is class loader?
+	- Class loader is the abstract class responsible for loading java classes into JVM.
+	- Its the crucial part of Java Runtime Environment data area which loades classes, interfaces and other resources
+	into memory.
+	- The primary functionality of class loader is loading, linking and initailization.
+
+
+How many data types are in java?
+	In java, there are two main data types such as primitive data type and non-primitive or reference data type.
+Primitive data type:
+	- These is the basic and built-in data type. there are 8 primitive data types.
+	- they are byte, short, int, long, float, double, boolean and char.
+Non-primitive or reference data types:
+	- reference data type are derived from the primitive data type and are used to store complex data structures.
+	- Array, Classes, Interfaces, Strings, Objects.
+
+What is String?
+	- In java, String is the reference data type.
+	- String represent the collection of characters.
+
+What is boolean?
+	- Boolean is the primitive data type in java.
+	- It represent the logical value where is it true or false.
+
+what is literals?
+	- literals is nothing but the constant value.
+
+What is static keyword?
+	- In java, static keyword is non-access modifier and also indicate JVM wouldn't create instance when compile the 
+	program. it can be applied to the variable and methods.
+	- It has different meanings depending on the context in which it is used,
+		- static variable:- static variables is shared all the instance of the class.
+				It essentially a global variable that is associated with a class rather than an instance of an object.
+				they are initailized only once, when the class is declared.
+				They can be accessed using class name or instance of the class.
+		- static method:- 
+				static method is a method that belongs to a class rather than an instance of the class.
+				they can be called without creating instances of the class.
+
+Can we use a method inside class without declaring and instantiating an object?
+	- No, we can't do that.
+	- If we want to create method inside a class, we can be use only static along with that method without initaiting an object.
+	- because in java, every program that starts executing in JVM with the main method is the entry-point of a java application.
+
+why we use static keyword along with the main method?
+	- static keyword is used along with the main method for several reasons.
+	- No instance is required:
+		when the JVM starts executing a java program, it doesn't create an instance of the class containing the 
+		main method. By declaring the main method as a static, we ensure that it can be called without creating
+		an instance of the class, because the static keyword indicate to the JVM that no object weren't created.
+	- Memory efficiency:-
+		If the main method weren't as static, the JVM would need to create an instance of the class to call the 
+		main method. This would require additional memory, which might be unnesscery for the simple program.
+
+
+What is loop?
+	- Loop are a fundamental concept in programming that allow to execute a block of code repeatedly for a specified
+	number of iteration or specified condition.
+
+
+When and why loops are needeed?
+	- Iterative over a collection of an element (array, linkedlist, etc).
+	- perform a task repeatedly in sequential data stucture until a condition met.
+
+what is iterator?
+	- An iterator is an object that can be used to loop through collections, like ArrayList and HashSet.
+	- Its called iterator because iterating is a technical term for looping.
+	- To use iterator, you must import it from the java.util. package
+	- An iterator is an object that allows traversal over records in a collection.
+	- when you get an instance of an iterator, you can call the next() method to get the next element in the list.
+	- you can use the hashNext() method to check if any elements remain to be processed. 
+	- When an iterator is first created, its cursor position is pointed at a position before the first element.
+	- The first call to the Next() method retrieves the first element and moves the cursor position to be between
+	first element and second element.
+	- By subsequently calls to the Next() method, the iterator cursor position is moves, until there are no element
+	left, meaning hashNext = false.
+	- When iterator position is 0 or start, its not pointing at element 0.
+
+Iterator Vs ListIterator:
+	- An Iterator is forward only and only support remove method.
+	- But A listIterator allows you to navigate both forward and backward. Beside the remove method, it also supports
+	add and set method, which function as you probably expect.
+
+
+Polymorphism:
+	- it is the one of the important feature of OOP.
+	- Polymorphism allows us to perform one action in different ways.
+	- Ploymorphism enables developer to create a efficient and resusable code.
+	- It classified in two type. that is compile time and run-time polymorphism.
+		- Compile time polymorphism:- this type of polymorphism is also known as static polymorphism.
+					    this type of polymorphism is achieved by using function or method overloading.
+		- Run time polymorphism:- its also known as dynamic dispatch. that occurs during the execution of the
+				             program at run time. This is achieved by method overridden.
+
+What is method overloading and method overridden?
+	- Method Overloading:- when multiple functions with the same name but different parameters then thease
+	functions are called overloading. Funcion can be overloaded by changes in the number arguments or/and change
+	in the type of arguments.
+	
+	- Method Overridden:- when the method in a subclass has the same name, the same parameter or signature
+	and same return type as a method in its superclass, then the method in the subclass is called to override the method
+	in the superclass.
+
+What is Abstraction?
+	- Abstraction is one of the key concepts of object oriented programming language.
+	- Its main goal is to handle complexity by hiding unnecessary details from the user. 
+	- That enable user to implement the complex logic on top of the provided abstraction without or even thinking 
+	about all the hidden complexity.
+	- Abstraction hides the internal implementation detail.
+
+What is abstract class?
+	- Abstract class is a class that cannot be instantiated by its own and is designed to be inherited by other classes.
+	- Abstract class promote code reusability, simplify the complex hierarchy and improve flexibility.
+	- By abstract class, we cannot be instantiate an object but we can be create reference.
+	- Concrete class is the normal class where we can be create an object by instantiating of a class.
+	- If we would be use abstract class, then we use the abstract keyword along with the class.
+	- Otherwise, that class is concrete class.
+	- If a class having atleast one abstract method, then you have make it as abstract class. And on the other hand,
+	A class can be abstract without any abstract method also. Its also possible.
+	- Abstract method haven't been a body or block of codes, instead of is ending with semicolon(;).
+
+What is Record class?
+	- In java, Record class is a special type of class declaration which aim is to be reduced the boilerplate codes.
+	- Java Record were introduced with intention to be used as a fast way to create data or object carrier classes.
+	- The classes whose objectives is to simply conatin data and carry it between modules, also known as POJO(Plain
+	Old Java Object) and DTO's (Data Transfer Object).
+	- Record class is implicitly static when used as inner class. This means we can access the inner class record directly
+	using Main class name.
+
+
+What is Enum?
+	- Enum is the special keyword in java that represents a group of constant or store/contain the group of elements.
+	- In Enum is where each elements are separated with comma and each elements should be uppercase only.
+
+What is generics?
+	- Generics is a parameterized type, generics are a feature that allows for creation of reusable code.
+	- The idea is allow types (Like Integer, String, etc or User-defined type) to be a parameter to methods, classes and
+	interfaces. 
+	- Using generics, it is possible to create classes that work with different data type. or other words,
+	They enables types (classes and interfaces) to be parameters when defining classes, interfaces and methods.
+
+why generics?
+	- Type safety errors:- Raw types could lead to runtime error due to type mismatch.
+	- Code duplication:- Developers had to create separate classes or methods to work for different data types.
+
+Benefits:
+	- Type safety,
+	- Code reusability,
+	- Flexibility.
+
+What is comparator or comparable interface?
+	- Both are interface that are used to sort and compare the array of objects.
+	- Both have significant difference.
+
+
+Throw keyword is used to throw the exception explicitly.
+
+
+what is nested class?
+	- A class can contain the other types within class body such as other classes, interfaces, enums and records.
+	- These classes are called nested types or nested classes.
+	- It has four different type of nested classes. they are you can use:-
+		- static nested class,
+		- instance nested class,
+		- local class,
+		- anonymous class.
+
+what is static nested class?
+	- The static nested class is a class that is enclosed in the structure of another class, including static.
+	- Here, we can directly accessed the outer class attributes even private attributes.
+	- or The enclosing class can access any attributes on the static nested class including private attributes.
+
+
+
+
+what is lamda expression?
+	- Lamda expression are concept in java that allow you to represent a function or a method as an object.
+	- They provide concise way to express a function or a method without declaring a separate class or a method.
+
+
+what is functional interface?
+	- A functional interface is an interface that contain exactly only one abstract method. This concept was itroduced
+	in java 8 to support lamda expressions, which provide the clear and concise way to represent the instances of 
+	single-abstract method interfaces using an expression.
+Key characteristics:
+	- Single-Abstract Method:- it has only one abstract method.
+	- @FunctionalInterface annotation:- this annotation is used to indicate that the interface is intended to be a functional
+	interface. It helps to compiler enforce the rule that the interface should have only one abstract method.
+	- Lamda expression:- Functional interfaces are often used with lamda expression to create instance of an interface
+	in a more readable and concise manner.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+					Stream in Java
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Stream:
+	- In java, a Stream represent the sequence or collection of element that support aggregate function such as filtering,
+	mapping, reducing and so on.
+	- It provides functional styling programming paradigm for processing collection of data.
+	- A streams was designed to manage the processing of element.
+Note:
+	- Another important difference is that streams are lazy, like lamda expression variables.
+	- When you call many of the method on stream, execution may not immediatly occur.
+	- instead of you will need to invoke a special operation on stream, like you would by calling lambda functional
+	method. This special operation is called terminal operation.
+
+Why use a Streams?
+	- Streams are exciting addition to java, Because they provide several benefits.
+	- First, they make a code to process data uniform, concise and repeatable, similar to database SQL.
+	- Second, When working with large collection, parallel streams will provide the performance advantage.
+
+Key points:
+	- It's not a data structure.
+	- Functional style
+
+
+Collection: To represent the group of object/data as single entity.
+Stream: To process the data from the collection, we use stream concept.
+
+What is terminal operation?
+	- In Java API Stream, the terminal operation is a method that produce a result or side-effect, and typically returns
+	void or a non-Stream result. In other words, terminal operation are the final-step in a Stream pipeline, and they
+	are trigger the entire pipeline.
+	- When a terminal operation in invoked, the Stream pipeline is executed, and the result is produced.
+	- Here are some examples of terminal operation,
+		- forEach(), collect(), reduce(), count(), toArray().
+
+Note: Streams are lazy:-
+	Computation on the source of the data is only performed when the terminal operation are initiated, and source
+	elements are consumed as only needed.	
+	In other words, the stream doesn't start processing the data until the terminal operation is called.
+	In Stream, the result will be consistent each time, but the process to get there element is not guarantee to be.
+	Once we invoke a terminal operation on a Stream, we can may think as a pipeline is opened, and the flow beginning, but
+	at that point, the valve is shut, and the pipelined closed.
+
+Why is this important?
+	This laziness has several benefits,
+	- Efficient memory usage:- Since the Streams only processes the data as needed, it doesn't require to storing entire
+				data set in memory at once. This is particularly useful when working on the large dataset.
+	- Improved performance:- By delayed the computation processing until necessary, Stream can avoid unnecessary
+				operations or overhead.
+	- Flexibility:- Laziness allow you to build the complex stream pipelines without worrying about the intermediate
+			result. so you can focus on defining the desired operation and the stream will take care the 
+			execution efficiently.
+
+
+
+
+
+
+
+
+
+
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+				         Data Structure and Algorithm 
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+What is an algorithm?
+	- An algorithm is a well-defined sequence of steps or instruction designed to perform a specific task or solve a
+	particular problem. 
+	- Algorithms are used for solve complex problems, mathematical calculations and data processing.
+
+
+what exactly is a data structure?
+	- The data structure is a way of storing data when programming.
+	- Its a collection of value and format they are stored in, the relationship between the values in the collection as
+	well as the operations applied on the data stored in the structure.
+
+		Data Structures
+1) Single-linked list,
+2) Double-linked list,
+3) Circular singly linked list,
+4) Arrays,
+5) Stacks,
+6)  Queues,
+7) Binary tree,
+8) Binary heaps,
+9) Graphs,
+10) Matrix,
+11) Tries,
+12) Hash Table,
+13) Hash map.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+				         List Interface - Arrays, LinkedList, Stack, Queue
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+What is List?
+	- List is the data structure that stores a collection of element in a specific order.
+	- It is the sequence of element where each values are identified by its index or position in the list.
+
+What is Array?
+	- Array is a fundametal data structure where all the elements are stored contiguously in memory.
+	- In array, we can easily access each elements by index value. Each elements in array has unique index value.
+	- we can easily make a operation like searching elements, storing elements and modfying it in straightforward.
+	- Array has classified in two types:
+		- Single dimension:- where elements are stored in only one row.
+		- Multi-dimension:- where elements are stored in multiple rows such as matrics.
+	- The idea of array is to represent many elements under single variable.
+
+What is Homogeneous and Hetrogeneous array?
+Homogeneous:-
+	- Homogeneous array that stores the same data type of elements. 
+	- In java, arrays are designed homogeneous. 
+	- When you create an array, you must specify the element of type it will hold.
+	- In python, arrays (or lists) can be homogeneous, but they don't have to be. 
+	- Python lists are dynamically typed, which means we can store different data type of element in the same list.
+
+Hetrogeneous:-
+	- Hetrogeneous array that stores different data type of elements.
+	- Java doesn't support hetrogeneous of an array in the classical sense. However, you can use an Objects of an array
+	to stored the different data type of elements.
+	- Meanwhile python lists hetrogeneous, that means we can store different data type of elements in the same list.
+
+What is the advantage of an array?
+	- Arrays stores the elements in contiguously in memory.
+	- So, we can fastly access and retrieval of data.
+	- Efficient memory usage:- array store same data type of elements in contiguous in memory, making efficent use
+	of memory.
+	- Easy to traverse
+Use case:
+	- Scientific simulation,
+	- Data analysis and
+	- Machine learning.
+
+Why we need array? Give with example.
+	Assume there are five students in the class and we have to store their marks in the examination, we can 
+declaring five variables individual and keeping their records. But when the number of students become very large, it would
+be more difficult to manage it. here, the array data structure comes. The idea of the array data structure is to represent all
+the elements under the single variable.
+
+Note: In java and C++ has dynamic array named ArrayList and vecotr but in python and JavaScript has defualt resizable
+array. it's named dynamic array.
+
+
+In java and C++/C, the limitation of an array is that they are fixed in size. so we can't insert the data if the number of the 
+is equal or greater than are equal to the size of an array. when this situation here the concept of dynamic array comes 
+into existence.
+
+
+What is a dynamic array?
+	- Dynamic array is a variable size list data structure.
+	- It grows automatically when we want to insert new element if there is no more space left for the new element.
+	- It allow to allocates in array size at runtime.
+	- While in normal array we allocate the array size at declaring stage.
+	- In java, ArrayList is a resizable implementation meanwhile in C++ named vector.
+
+
+working of Dynamic array:
+	- In the dynamic array, the elements are stored contiguously from as starting of the array.
+	- when the reserved space is consumed and required memory in array to add some elements.
+	- In such case, the fixed size array is need to be increased in size.
+	- This done in two ways.
+		- First we allocate the bigger array and copy the elements from the old array if the old has no space left,
+		and return the newly created array.
+		- Second, Create a function that create a new array of double size, copies all the elements from old
+		array to new array and return the new array.
+
+What is linear search?
+	- Linear search is a simple algorithm that sequentially checks each element in the collection
+	until the desired element is found or the entire array is traversed.
+	- It is suitable small-sized or unsorted array.
+	- But it's time complexity is O(n) in the worst case.
+
+What is Binary search?
+	- Binary search is a search algorithm used to find the position of a target value within a sorted array.
+	- It works by repeatedly dividing the search interval in half until the target value is found or the interval is empty.
+	- The search interval is halved by comparing the target element with the middle value of the search space.
+
+Other search algorithms:
+	1) Sentinel linear search,
+	2) Meta binary search,
+	3) Ternary search,
+	4) Jump search,
+	5) Interpolation search,
+	6) Exponential search,
+	7) Fibonacci search.
+
+
+What is iterative and recursive?
+Iterative:-
+	- An iterative approach involves using loop to repeatedly execute a set of instructions until a conditions is met.
+	- The can be a for loop, while loop or do-while loop.
+
+Recursive:-
+	- A Recursive approach involves calling a function within itself to solve a problem.
+	- The function breaks down the problem into smaller sub-problems, solves each sub problem sub-probem and 
+	combines the solutions to solve the original problem.
+
+key difference:-
+	- Loops vs function calls:- Iterative solution using loop, while recursive solution use function calls.
+	- Memory usage:- Recursive solution typically use more memory than iterative solution, since each recursive 
+	call create a new stack frame.
+	- Code complexity:- Recursive solutions can be 
+
+
+
+What is Linked List?
+	- Linked list is a dynamic data structure that collects nodes where each node connects to the next node through
+	link or address or pointers.
+	- linked list have two parts that is node(store data) and address(store the second element address).
+	- Linked list is mainly allow efficient insertion and deletion operations compared to arrays.
+	- But random access doesn't support instead of accessing elements sequentaily.
+
+Type of linked list:
+	- Single linked list,
+	- Circular linked list,
+	- Double linked list.
+
+Array vs LinkedList:-
+			Array						LinkedList
+	The array element can be accessed randomly using	Random access is not possible. Accessing can be only
+	its index value.					performed sequentailly.
+	
+	static, which means memory size is fixed and can't be	dynamic, which means memory size can be shrink and
+	changed at run time.				expand at runtime according to requirement.
+
+	Each element independent.				Each node dependent to each other.
+
+	The array takes more time while in some operation	less time while in some operation like insertion and
+	like insertion and deletion etc.			deletion etc.
+
+
+
+
+which one is good array or linked list:-
+	- An array is good choice for retrieving any value randomly.
+	- But its worse at adding and removing the values from the array.
+	- its perfect suitable when the program that your working on is kind of creating static list that doesn't change very much
+	like adding or deleting and spend lot of time just retrieving randomly.
+	- on the other hand if the program that never has need to retrieve the data and insert or removing data, linked list
+	is perform very fast those action of inserting and removing but its very worse at randomly retrieve the data.
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+				         Map Interface - HashMap
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+What is Map?
+	- Map is the data structure that store a collection of key-value pairs, where each key is unique and maps to a
+	specific value.
+	- It also known as a associative array, dictionary or hash table.
+	- In a map data structure, each key is associated with the specific value and we can use the key to lookup the 
+	corresponding value.
+	- Map is the efficient and useful data structure when we need to store and retrieve data by its key rather than 
+	the index value.
+
+What is hash function?
+	- A hash function is the mathematical function that takes the user input and generate a fixed size output.
+	- The output of a hash function is unique to the input and is designed to be deterministic, meaning that the same
+	input will always produce the same output.
+
+What is HashMap?
+	- Hashmap (also known as Hash Table) is a data structure that stores key-value pairs in a way that allow efficient
+	lookup, insertion and deletion of an element.
+	- It uses a hash function to maps key to indices of a backing array, where the corresponding values are stored.
+
+Why use a hash-map?
+	- Fastest lookup:-
+		it provide the fast lookup, insertion and deletion of an operation with average time complexity.
+	- Efficient storage:-
+		Hash map can store a large number of key-value pairs in a relatively small amount of memory.
+	- Flexible data structure:-
+		Hash can be used to implement the various data structure such as caches, dictionaries and graph.
+	- Easy to implement.
+
+What is HashSet?
+	- In java, hash-set is the data structure that store the collection of the unique elements without any particular
+	order.
+	- In java, hash-set is implemented with the help set interface, which a way to store and manipulate the unique
+	elements.
+
+What is the difference between hash-map and hash-set:
+	HashMap:- It allow duplicate values and accessing value through its key.
+	HashSet:- It doesn't allow any duplicates value to store.
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+				         Set interface -  TreeSet, HashSet and LinkedHashSet
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+What is Set data-structure?
+	- Set is defined as a data structure that store a collections of distinct elements.
+	- The signature property of the set is that it doesn't allow duplicate elements.
+
+
+
+
+
+
+
+
+
+

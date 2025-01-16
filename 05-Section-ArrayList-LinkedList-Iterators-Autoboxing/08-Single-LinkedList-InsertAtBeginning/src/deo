@@ -1,0 +1,55 @@
+/*
+ * Construct the linked list,
+ * Insert nodes at the beginning
+ * Display the nodes
+ * Insert node at any position
+ * Delete the node
+
+ */
+public class LinkedList {
+
+    // constrcut node
+    // A node contain the data and address of the next node(reference node).
+    class Node{
+        int data; // data
+        Node next; // reference node that refer the next node
+
+        // set attributes on this node
+        public Node(int data) {
+            this.data = data;
+            this.next = null;
+        }
+    }
+
+    // initialize the head node
+    // also reference variable for node
+    Node head;
+
+    // In the LinkedList, at the beginning head node must be null
+    LinkedList() {
+        head = null;
+    }
+
+    // create a method for adding new node
+    public void addNewNodeAtBeginning(int val) {
+        Node newNode = new Node(val);
+        // when the head node is null, then perform
+        if (head == null) {
+            head = newNode;
+        } else { // when linkedlist contain any one node, then it perform
+            newNode.next = head;
+            head = newNode;
+        }
+    }
+
+    // display nodes
+    public void displayNodes() {
+        Node temp = head;
+        System.out.print("Head->");
+        while (temp != null) {
+            System.out.print(temp.data + "->");
+            temp = temp.next;
+        }
+        System.out.print("NULL");
+    }
+}
