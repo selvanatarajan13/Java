@@ -1,0 +1,14 @@
+Sorting algorithm:
+	Sorting algorithms are used to arranging data in a particular format. either ascending or decending.
+types:
+1) Bubble sort,
+2) Selection sort,
+3) Insertion sort,
+4) Bucket,
+5) Merge,
+6) Quick,
+7) Heap.
+
+what is bubble sort?
+	Bubble Sort is a simple sorting algorithm that repeatedly steps through the list, compares adjacent elements, and swaps them if they are in the wrong order. This process is repeated until the list is sorted. 
+
