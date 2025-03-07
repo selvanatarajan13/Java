@@ -1,0 +1,19 @@
+Exception Handling:
+	"Exception handling is a programming technique that allows a program to handle and manage errors or unexpected events that occurs during exection". It prevent crashes or abprut termination, provide meaningful error message, recover from errors or exceptions, maintain data consistency and integrity and improve overall program reliability and robustness.
+
+or 
+
+	"Exception handling is a programming technique that allows a program to handle errors and continue running smoothly, even when an exception or disturbance occurs".
+
+What are the types of exceptions?
+Exception can come in the following two exception classes:
+	- Checked exception:
+		This exception is also called as compile time exception, the compiler checks the exceptions during the 		compilation process to confirm if the exception is being handled by programmer. If not, then the exception errors 
+	displays the system. Checked exception includes SQLException, ClassNotFoundException and etc.
+	
+	- Unchecked exception:
+		Also called runtime-exception, these exceptions occur during program execution. These exceptions are 
+	not checked at compile-time, so the programmer is responsible for handling these exceptions. Unchecked 		exception don't given compilation errors. Example of unchecked exceptions include NullPointerException, 		IllegalArgumentException and etc.
+
+
+

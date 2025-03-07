@@ -1,0 +1,21 @@
+What are the consequences of keeping file resource opened?
+* Performance issue:
+	- Memory leaks: Open file resources can consume system memory, leading to memory leaks and performance 	degradation.
+	- Resource starvation: Excessive open file resources can starve other processes of resources, causing them to 	slow down or fail.
+* Security risk:
+	- Data corruption: Leaving file resources open can expose them to unauthorized access, potentially leading to 	data corruption or tampering.
+	- Malicious activity: 2. Open file resources can be exploited by malicious actors to inject malware or execute 		unauthorized code.
+* Stability and reliability issuses:
+	- File locking: Open file resources can lock files, preventing other processes from accessing or modifying them.
+* Scalability limitation:
+	- File descriptor exhaustion: Excessive open file resources can exhaust the available file descriptors, limiting the 	scalability of applications.
+NOTE: Fortunately, most of the java classes have you will use to interact with file, also implement autoclosable interface, which makes closing resource seamless.
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Java.IO:
+	- Java.io is a package that contains the original set of types that support reading and writing data from external 	resources.
+
+What is IOException?
+	- IOException is a checked exception, which means that it must be either caught and handled by the code that 	throws it.
+	- Its parent class of many common exception you will encounter, when working with external resources.

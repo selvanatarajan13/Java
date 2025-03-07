@@ -1,0 +1,4 @@
+File Reader time:
+28509000
+Buffered Reader time:
+1861400

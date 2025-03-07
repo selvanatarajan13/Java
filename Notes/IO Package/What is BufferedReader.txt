@@ -1,0 +1,1 @@
+BufferedReader class in java is a class that is used to efficiently reads data from a character input stream by buffering character in memory, allowing faster for faster reading of large amount of data compared to directly reading by the underlying stream character by character; essentially, it read chunks of data at once and store them in a buffer for quick access.

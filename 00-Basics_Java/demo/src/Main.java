@@ -1,7 +1,12 @@
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.Hashtable;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.NoSuchFileException;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.*;
 
 public class Main  {
 
@@ -39,7 +44,42 @@ public class Main  {
 
         System.out.println(names);
 
+        String fileName = "C:\\Users\\User\\Desktop\\Links\\LinkedIn.txt";
+        Path path = Paths.get(fileName);
+        try {
+            List<String> lines = Files.readAllLines(path);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        } finally {
+            System.out.println("May I'd log something either way");
+        }
 
+        testMethod("cvs.s");
+
+        //System.out.println("File exists and able to use as a resource");
+    }
+
+    private static void testMethod(String fileName) {
+        Path path = Paths.get(fileName);
+        try {
+            // FileReader fileReader = new FileReader(fileName);
+            List<String> list = Files.readAllLines(path);
+        } catch (FileNotFoundException e) {
+            System.out.println("File Not Found");
+        } catch (IOException e) {
+            if (e instanceof NoSuchFileException) {
+                System.out.println("File Not Found");
+            } else {
+                throw new RuntimeException(e    );
+            }
+        } catch (NullPointerException e) {
+            System.out.println(e);
+        } finally {
+            System.out.println("May I'd log something either way");
+        }
+
+        System.out.println("File exists and able to use as a resource");
+        System.out.println("Current working dir : " + new File("").getAbsolutePath());
     }
 }
 

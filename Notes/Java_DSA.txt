@@ -303,15 +303,54 @@ Why is this important?
 			execution efficiently.
 
 
+Can I create a object without using reference/variable?
+	- Yes, we can create a object without using reference or variable by using method invocation, return statement and anonymous
+	class.
+	- Using method invocation,
+		- we can create object through as parameter in a method using new keyword.
+	- Using return statement,
+		- we can create object through return statement using new keyword.
+	- it has some limitation and its not very common for most time.
+Limitation:
+	- Limited Object lifetime:
+		- Since the object is not stored the reference, it has limited lifetime to the scope of the method call. Once the object 	
+		method call completes, the object become eligible for garbage collection.
+	- No Direct Access:
+		- Without a reference, you can't directly access the object's method or attributes.
+	- Limited Reusability:
+		- After creating object without creating reference is typically used once and then discaded, it lead limited reusability.
+	- Potential Performance Impact:
+		- creating object without reference can lead to increase memory allocation and garbage collection, potentially 		impacting performence in memory-constrained environment.
+Note:
+When we creating a object without the reference, the memory allocation and garbage collection can increase.
+In Memory Allocation:-
+	- Object creating: in this case the memory is allocated on heap to store the object.
+	- Short-lived Objects: Without a reference of the object, called short-lived object. After creating of this object and used once, it 
+	becomes eligible for garbage collection.
+	- Increased Memory Allocation: With more short-lived object, the JVM needs to allocate and deallocate memory more 	frequently, this leading to memory allocation overhead.
+In Garbage Collection:-
+	- More Frequent Garbage Collection: With more short-lived objects, the JVM needs to perform garbage collection on memory
+	more frequently to free-up the memory.
+	- Increased Garbage Collection Overhead: In cases, garabage collection introduce pause time, during which the application is 
+	unresponsive. More frequent garbage collection lead to increased pause times and slower application performence.
+	- Memory fregmentation: Frequent garage collection can cause memory fragmentation, leading to slower memory allocation
+	and deallocation.
 
-
-
-
-
-
-
-
-
+Creating a object without references is common practice in various scenarious. There are
+	- Method chaining:
+		when you need to perform a multiple operation on a object but don't need to store the object itself, we can use 				object without reference.
+		
+		Example:
+			new StringBuilder().append("Hello").append(" World").toString();
+		The above example of the operation is called the method chaining.
+	- Event Handling:
+		In event-driven programming, we might create objects to handle events without needing to store them. In this case,
+		we can use it.
+	- Data processing
+	- Testing
+	- Anonymous class
+	- Lamda expression
+	- Inner class.
 
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
