@@ -6,5 +6,10 @@ public class Main {
         n1.setDrinkSize("small");
         n1.setExtraToppings("cheese","ham","tomato");
         n1.printItem();
+
+
+        System.out.println("-".repeat(25));
+
+
     }
 }
