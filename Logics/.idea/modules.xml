@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Bus_Ticket_Reservation/Bus_Ticket_Reservation.iml" filepath="$PROJECT_DIR$/Bus_Ticket_Reservation/Bus_Ticket_Reservation.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/Logics.iml" filepath="$PROJECT_DIR$/.idea/Logics.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MovieTicketBooking/MovieTicketBooking.iml" filepath="$PROJECT_DIR$/MovieTicketBooking/MovieTicketBooking.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Sorting_Algorithms/Sorting_Algorithms.iml" filepath="$PROJECT_DIR$/Sorting_Algorithms/Sorting_Algorithms.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Task_Management_System/Task_Management_System.iml" filepath="$PROJECT_DIR$/Task_Management_System/Task_Management_System.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Taxi_Booking_System/Taxi_Booking_System.iml" filepath="$PROJECT_DIR$/Taxi_Booking_System/Taxi_Booking_System.iml" />
+    </modules>
+  </component>
+</project>

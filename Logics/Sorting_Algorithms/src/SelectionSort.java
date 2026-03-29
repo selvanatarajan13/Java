@@ -1,0 +1,29 @@
+// Find the smallest element and place it at the beginning.
+public class SelectionSort implements Sorting {
+
+    private int[] nums;
+
+    public SelectionSort(int[] nums) {
+        this.nums = nums;
+    }
+
+    @Override
+    public void sort() {
+        for (int i = 0; i < nums.length; i++) {
+            int minIndex = i;
+            for (int j = i + 1; j < nums.length; j++) {
+                if (nums[j] < nums[minIndex]) {
+                    minIndex = j;
+                }
+            }
+
+            int temp = nums[i];
+            nums[i] = nums[minIndex];
+            nums[minIndex] = temp;
+        }
+
+        for (int num: nums) {
+            System.out.print(num + " ");
+        }
+    }
+}
