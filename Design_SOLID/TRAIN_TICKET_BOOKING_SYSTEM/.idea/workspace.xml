@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="17062fd5-f958-4cbe-a62c-4935b2856371" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TRAIN_TICKET_BOOKING_SYSTEM.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/domain/ticket/Ticket.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/domain/ticket/TicketStatus.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/domain/train/AcCoach.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/domain/train/Coach.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/domain/train/Seat.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/domain/train/SleeperCoach.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/domain/train/Train.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/domain/user/Passenger.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/domain/user/PassengerType.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/exception/BookingException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/exception/CancellationException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/exception/RailwayException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/exception/SeatNotAvailableException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/exception/ValidationException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pricing/ACFareCalculator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pricing/FareCalculateFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pricing/FareCalculator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pricing/SleeperFareCalculator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/service/booking/BookingService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/service/booking/BookingServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/service/cancellation/CancellationService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/service/cancellation/CancellationServiceImpl.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
+  <component name="ProjectId" id="37nmW7jj2r7MgIdB92MLkJ4R2cy" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "Application.Main.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="TRAIN_TICKET_BOOKING_SYSTEM" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="17062fd5-f958-4cbe-a62c-4935b2856371" name="Changes" comment="" />
+      <created>1767547246215</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1767547246215</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+  </component>
+</project>
