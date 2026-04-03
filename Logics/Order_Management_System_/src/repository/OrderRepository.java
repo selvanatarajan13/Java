@@ -71,6 +71,7 @@ public class OrderRepository implements Repository<Order> {
                         a.getProduct().getFinalPrice()
                 )
         );
+        maxHeap.addAll(orderMap.values());
 
         List<Order> result = new ArrayList<>();
         for (int i=0; i<n && !maxHeap.isEmpty(); i++) {
