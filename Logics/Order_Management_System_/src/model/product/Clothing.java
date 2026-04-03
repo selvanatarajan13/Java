@@ -6,6 +6,8 @@ public class Clothing extends Product {
     private String size;
     private String color;
 
+    private final static int DISCOUNT = 20;
+
     public Clothing(String productId, String productName, double basePrice, String size, String color) {
         super(productId, productName, basePrice, ProductCategory.CLOTHING);
         this.size = size;
@@ -14,6 +16,6 @@ public class Clothing extends Product {
 
     @Override
     public double getDiscount() {
-        return 20;
+        return DISCOUNT;
     }
 }

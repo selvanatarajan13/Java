@@ -31,4 +31,22 @@ public class ProductRepository implements Repository<Product> {
         }
         productMap.remove(id);
     }
+
+    // DSA: Heap — top N expensive orders using PriorityQueue
+    public List<Product> getTopNExpensiveProducts(int n) {
+        PriorityQueue<Product> maxHeap = new PriorityQueue<>(
+                (a,b) -> Double.compare(
+                        b.getFinalPrice(),
+                        a.getFinalPrice()
+                )
+        );
+        maxHeap.addAll(productMap.values());
+
+        List<Product> result = new ArrayList<>();
+        for (int i=0; i<n && !maxHeap.isEmpty(); i++) {
+            result.add(maxHeap.poll());
+        }
+
+        return result;
+    }
 }

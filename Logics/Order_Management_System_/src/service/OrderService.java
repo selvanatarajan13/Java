@@ -8,6 +8,7 @@ import model.Order;
 import model.product.Product;
 import payment.PaymentStrategy;
 import repository.OrderRepository;
+import repository.ProductRepository;
 
 import java.util.List;
 import java.util.Map;
@@ -17,12 +18,14 @@ public class OrderService {
     private static OrderService instance;
 
     private final OrderRepository orderRepository;
+    private final ProductRepository productRepository;
     private final OrderValidator validator;
     private final OrderNotifier notifier;
     private final AuditLog auditLog;
 
     public OrderService() {
         this.orderRepository = new OrderRepository();
+        this.productRepository = new ProductRepository();
         this.validator = new OrderValidator();
         this.notifier = new OrderNotifier();
         this.auditLog = new AuditLog();
@@ -114,6 +117,13 @@ public class OrderService {
         auditLog.log("Order delivered: " + orderId);
     }
 
+    // ===== Save Products =====
+    public void saveProduct(List<Product> productList) {
+        for (Product product: productList) {
+            productRepository.save(product);
+        }
+    }
+
     // ===== Undo Last Order — Stack DSA =====
     public void undoLastOrder() {
         orderRepository.undoLastOrder().ifPresentOrElse(
@@ -123,6 +133,7 @@ public class OrderService {
 
     // ===== DSA Operations =====
     public List<Order> getTopNExpensive(int n)  { return orderRepository.getTopNExpensive(n); }
+    public List<Product> getTopNExpensiveProducts(int n) { return productRepository.getTopNExpensiveProducts(n); }
     public List<Order> getAllSortedByPrice()     { return orderRepository.getSortedByPrice(); }
     public List<Order> findByCustomer(String id){ return orderRepository.findByCustomerId(id); }
     public Map<String, List<Order>> groupByStatus() { return orderRepository.groupByStatus(); }

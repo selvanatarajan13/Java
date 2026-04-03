@@ -20,11 +20,11 @@ public abstract class Product {
 
     public double getFinalPrice() {
         // getDiscount() calls the subclass version automatically!
-        return basePrice * (1 - getDiscount()/100);
+        return this.basePrice * (1 - getDiscount()/100);
     }
 
     public String getProductId() {
-        return productId;
+        return this.productId;
     }
 
     public void setProductId(String productId) {
@@ -32,7 +32,7 @@ public abstract class Product {
     }
 
     public String getProductName() {
-        return productName;
+        return this.productName;
     }
 
     public void setProductName(String productName) {
@@ -40,7 +40,7 @@ public abstract class Product {
     }
 
     public double getBasePrice() {
-        return basePrice;
+        return this.basePrice;
     }
 
     public void setBasePrice(double basePrice) {
@@ -48,7 +48,7 @@ public abstract class Product {
     }
 
     public ProductCategory getCategory() {
-        return category;
+        return this.category;
     }
 
     public void setCategory(ProductCategory category) {

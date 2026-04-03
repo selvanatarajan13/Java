@@ -11,6 +11,8 @@ import payment.CardPayment;
 import payment.UPIPayment;
 import service.OrderService;
 
+import java.util.List;
+
 public class Main {
     public static void main(String[] args) {
         System.out.println("\n========== ORDER MANAGEMENT SYSTEM ==========\n");
@@ -30,6 +32,8 @@ public class Main {
         Product macBook = ProductFactory.create(ProductCategory.ELECTRONICS,
                 "P04", "MacBook Air", 120000, "Apple", "24");
 
+        service.saveProduct(List.of(iPhone, shirt, milk, macBook));
+
         // ===== Decorator Pattern — add-ons =====
         Product iPhoneGifted   = new GiftWrapDecorator(iPhone);
         Product macBookExpress = new ExpressDeliveryDecorator(macBook);
@@ -38,8 +42,8 @@ public class Main {
 
         System.out.println("\n===== PRODUCT PRICES =====");
         System.out.println(iPhone        + " → Final: ₹" + iPhone.getFinalPrice());
-        System.out.println(iPhoneGifted  + " → Final: ₹" + iPhoneGifted.getFinalPrice());
-        System.out.println(macBookBoth   + " → Final: ₹" + macBookBoth.getFinalPrice());
+        System.out.println(iPhoneGifted + " → Final: ₹" + iPhoneGifted.getFinalPrice());
+        System.out.println(macBookBoth + " → Final: ₹" + macBookBoth.getFinalPrice());
 
         // ===== Customers =====
         Customer bob   = new Customer("C01", "Bob",   "9787660170", "Nagercoil");
@@ -67,13 +71,21 @@ public class Main {
         service.deliverOrder("ORD001");
 
         // ===== Invalid transition test =====
-        System.out.println("\n===== INVALID TRANSITION TEST =====");
-        try {
-            service.cancelOrder("ORD001"); // Already delivered — should throw
-        } catch (exception.InvalidTransitionException e) {
-            System.out.println("Caught: " + e.getMessage());
-        }
+        //System.out.println("\n===== INVALID TRANSITION TEST =====");
+        //try {
+            //service.cancelOrder("ORD001"); // Already delivered — should throw
+        //} catch (exception.InvalidTransitionException e) {
+            //System.out.println("Caught: " + e.getMessage());
+        //}
 
+        // ===== DSA: Top N Expensive Products =====
+        System.out.println("\n===== TOP 3 EXPENSIVE PRODUCTS (Heap) =====");
+        System.out.printf("  %s — ₹%s — %s%n", "name", "price", "base Price");
+        service.getTopNExpensiveProducts(2)
+                .forEach(o -> System.out.printf("  %s — ₹%.2f — ₹%.2f%n",
+                        o.getProductName(),
+                        o.getFinalPrice(),
+                        o.getBasePrice()));
         // ===== DSA: Top 3 Expensive =====
         System.out.println("\n===== TOP 3 EXPENSIVE ORDERS (Heap) =====");
         service.getTopNExpensive(3)
